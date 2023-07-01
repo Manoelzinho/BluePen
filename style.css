@@ -126,7 +126,6 @@ body{
 
 .home_img img{
     width: 100%;
-    margin-bottom: -4rem;
 }
 
 @media(max-width:785px){
