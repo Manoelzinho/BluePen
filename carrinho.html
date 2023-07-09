@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/Logo.png">
+     <!-- link para as fontes do google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
+    <!-- ............................. -->
+    <title>Blue Pen</title>
+    <style>
+    @charset "UTF-8";
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Carme', sans-serif;
+        text-decoration: none;
+    }
+
+    :root{
+        --blue:#3333bd;
+        --white:#fff;
+        --dark: #0f0f0f;
+        --wblue: #7287f3;
+        --dblue: #27279b;
+        
+    }
+
+    body{
+        color:var(--dark);
+        background-color: var(--white);
+    }
+
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 40px;
+        box-shadow: 0 0.2rem 0.6rem #ccc;
+        width: 100%;
+        background: var(--white);
+        transition: all 0.5s;
+        position: fixed;
+    }
+
+    .navigation .logo{
+        color: var(--blue);
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .navigation ul{
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        list-style: none;
+    }
+
+    .navigation ul li a{
+        color: var(--dark);
+        font-size: 17px;
+        font-weight: 400;
+        transition: all 0.3s;
+    }
+
+    .navigation ul li a:hover{
+        color: var(--dblue);
+    }
+
+    .navigation i{
+        cursor: pointer;
+        font-size: 1.3rem;
+    }
+
+    .menu{
+        cursor: pointer;
+        display: none;
+    }
+
+    .menu .bar{
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--dark);
+        margin: 5px auto;
+        transition: all 0.3s;
+    }
+
+    .menu .bar:nth-child(1),
+    .menu .bar:nth-child(3){
+        background: var(--blue);
+    }
+
+
+    @media(max-width:785px){
+        .navigation{
+            padding: 18px 20px;
+        }
+        .menu{
+            display: block;
+        }
+        .menu.ativo .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .menu.ativo .bar:nth-child(2){
+            opacity: 0;
+        }
+        .menu.ativo .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        .nav-menu{
+            position: fixed;
+            right: -100%;
+            top: 70px;
+            width: 100%;
+            height:100%;
+            flex-direction: column;
+            background: var(--white);
+            gap: -10px;
+            transition: all 0.3s;
+        }
+        .nav-menu.ativo{
+            right: 0;
+        }
+        .nav-item{
+            margin: 16px 0;
+
+        }
+    }
+
+.carrinho{
+    color : var(--dark);
+    margin-left: 10%;
+    font-size: 1.5rem;
+    line-height: 4rem;
+}
+.carrinho h5 a{
+    color: var(--blue);
+    text-decoration: none;
+}
+.carrinho h5{
+    text-align: right;
+    margin-right: 10%;
+}
+.carrinho p{
+    margin-left: 5%;
+}
+
+</style>
+</head> 
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="#" class="logo"><b>BLUE PEN</b></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></li>
+                <li class="nav-item"><a href="#">Entrar</a></li>
+                <li class="nav-item"><a href="#">Sobre Nós</a></li>
+                <li class="nav-item"><a href="favoritos.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li class="nav-item"><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                
+                <li class="nav-item"><a href="#">Atendimento ao Cliente</a></li>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="carrinho">
+        <h5><a href="index.html">Olhar produtos</a></h5> 
+        <h2><b>Itens no carrinho</b></h2>
+        <hr color="black" align="left" width="60%">
+        <p>Você não possui nada em seu carrinho no momento.</p>
+    </div>
+</body>
+</html>
