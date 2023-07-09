@@ -14,126 +14,127 @@
     <!-- ............................. -->
     <title>Blue Pen</title>
 <style>
-        @charset "UTF-8";
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Carme', sans-serif;
-            text-decoration: none;
-        }
+    @charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Carme', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --blue:#3333bd;
+    --white:#fff;
+    --dark: #0f0f0f;
+    --wblue: #7287f3;
+    --dblue: #27279b;
     
-        :root{
-            --blue:#3333bd;
-            --white:#fff;
-            --dark: #0f0f0f;
-            --wblue: #7287f3;
-            --dblue: #27279b;
-            
-        }
-    
-        body{
-            color:var(--dark);
-            background-color: var(--white);
-        }
-    
-        .navigation{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 40px;
-            box-shadow: 0 0.2rem 0.6rem #ccc;
-            width: 100%;
-            background: var(--white);
-            transition: all 0.5s;
-            position: fixed;
-        }
-    
-        .navigation .logo{
-            color: var(--blue);
-            font-size: 1.7rem;
-            font-weight: 600;
-        }
-    
-        .navigation ul{
-            display: flex;
-            align-items: center;
-            gap: 5rem;
-            list-style: none;
-        }
-    
-        .navigation ul li a{
-            color: var(--dark);
-            font-size: 17px;
-            font-weight: 400;
-            transition: all 0.3s;
-        }
-    
-        .navigation ul li a:hover{
-            color: var(--dblue);
-        }
-    
-        .navigation i{
-            cursor: pointer;
-            font-size: 1.3rem;
-        }
-    
-        .menu{
-            cursor: pointer;
-            display: none;
-        }
-    
-        .menu .bar{
-            display: block;
-            width: 28px;
-            height: 3px;
-            border-radius: 3px;
-            background: var(--dark);
-            margin: 5px auto;
-            transition: all 0.3s;
-        }
-    
-        .menu .bar:nth-child(1),
-        .menu .bar:nth-child(3){
-            background: var(--blue);
-        }
-    
-    
-        @media(max-width:785px){
-            .navigation{
-                padding: 18px 20px;
-            }
-            .menu{
-                display: block;
-            }
-            .menu.ativo .bar:nth-child(1){
-                transform: translateY(8px) rotate(45deg);
-            }
-            .menu.ativo .bar:nth-child(2){
-                opacity: 0;
-            }
-            .menu.ativo .bar:nth-child(3){
-                transform: translateY(-8px) rotate(-45deg);
-            }
-            .nav-menu{
-                position: fixed;
-                right: -100%;
-                top: 70px;
-                width: 100%;
-                height:100%;
-                flex-direction: column;
-                background: var(--white);
-                gap: -10px;
-                transition: all 0.3s;
-            }
-            .nav-menu.ativo{
-                right: 0;
-            }
-            .nav-item{
-                margin: 16px 0;
-    
-            }
-        }
+}
+
+body{
+    color:var(--dark);
+    background-color: var(--white);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.2rem 0.6rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+}
+
+.navigation .logo{
+    color: var(--blue);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    list-style: none;
+}
+
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.navigation ul li a:hover{
+    color: var(--dblue);
+}
+
+.navigation i{
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--blue);
+}
+
+
+@media(max-width:785px){
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height:100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: all 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+
+    }
+}
+
         .textmain{
         margin-left: 6%;
         line-height: 2.2rem;
@@ -209,3 +210,6 @@
       </div>
     </section>
   </main>  
+  <script src="script.js"></script>
+</body>
+</html>

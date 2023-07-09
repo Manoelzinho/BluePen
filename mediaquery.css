@@ -2,4 +2,12 @@
     .home_img img{
         width: 0%;
     }
+    .carrinho p{
+        font-size: 0.8rem;
+        line-height: 2rem;
+    }
+    .carrinho h2{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 }
