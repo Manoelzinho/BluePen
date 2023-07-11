@@ -185,21 +185,24 @@ body{
     }
 }
 .categoria h2{
-    text-align: center;
-    line-height: 5.8rem;
+    margin-left: 4%;
+    line-height: 5rem;
+    font-size: 2.5rem;
 }
 
 .categoria{
     line-height: 3.6rem;
     font-size: 1.8rem;
-    
+    border: 5px solid #c9c9c9;
+    width: 90%;
+    margin-left: 4%;
 }
 
 .imgs_cat{
     display: flex;
     justify-content: space-between;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 8%;
+    margin-right: 11%;
     
 }
 .img_cat1{
@@ -257,3 +260,4 @@ body{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
  }
+
