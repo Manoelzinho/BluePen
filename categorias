@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <link rel="icon" type="image/png" href="imagens/Logo.png">
+     <!-- link para as fontes do google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
+    <!-- ............................. -->
+    <title>Blue Pen</title>
+<style>
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Carme', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --blue:#3333bd;
+    --white:#fff;
+    --dark: #0f0f0f;
+    --wblue: #7287f3;
+    --dblue: #27279b;
+    
+}
+
+body{
+    color:var(--dark);
+    background-color: var(--white);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.2rem 0.6rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+}
+
+.navigation .logo{
+    color: var(--blue);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    list-style: none;
+}
+
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.navigation ul li a:hover{
+    color: var(--dblue);
+}
+
+.navigation i{
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--blue);
+}
+
+@media(max-width:785px){
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height:100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: all 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+
+    }
+  }
+        .produtos {
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          color:black;
+        }
+        
+        .produto {
+          width: 30%;
+          background-color: #fff;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          padding: 20px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          color: black;
+        }
+        
+        .produto img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+        
+        .preco {
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+        .subpreco{
+            color: rgb(191, 191, 191);
+            font-size: 1rem;
+            text-decoration: line-through;
+        }
+
+        .botoes{
+          display: flex;
+        }
+
+        .botao {
+          display: block;
+          background-color: #1100ff;
+          text-align: center;
+          padding: 8px;
+          width: 80%;
+          border-radius: 5px;
+          transition: background-color 0.2s ease;
+          border: none;
+          margin-left: 2%;
+        }
+
+        .botao a{
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem;
+        }
+        
+        .botaoc {
+          background-color: #1100ff;
+          text-decoration: none;
+          padding: 8px;
+          border-radius: 7px;
+          border: none;
+          transition: background-color 0.2s ease;
+          left: -2%;
+        }
+        
+        .botao:hover {
+          background-color:rgb(42, 42, 117);
+          color: white;
+        }
+        
+        .botaoc:hover {
+          background-color:rgb(42, 42, 117);
+        }
+        .h1_1{
+          margin-left: 20px;
+        }
+
+																			.categoria h2{
+    margin-left: 4%;
+    line-height: 5rem;
+    font-size: 2.5rem;
+}
+
+.categoria{
+    line-height: 3.6rem;
+    font-size: 1.8rem;
+    border: 5px solid #c9c9c9;
+    width: 90%;
+    margin-left: 4%;
+}
+
+.imgs_cat{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8%;
+    margin-right: 11%;
+    
+}
+.img_cat1{
+    overflow: hidden;
+ }
+ 
+ .img_cat1 img{
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+ }
+ 
+ .img_cat1:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+ }
+
+ .img_cat2{
+    overflow: hidden;
+ }
+ 
+ .img_ca21 img{
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+ }
+ 
+ .img_cat2:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+ }
+
+ .img_cat3{
+    overflow: hidden;
+ }
+ 
+ .img_cat3 img{
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+ }
+ 
+ .img_cat3:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+ }
+
+ .img_cat4{
+    overflow: hidden;
+ }
+ 
+ .img_cat4 img{
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+ }
+ 
+ .img_cat4:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+ }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="#" class="logo"><b>BLUE PEN</b></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#">Entrar</a></li>
+                <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
+                <li class="nav-item"><a href="favoritos.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li class="nav-item"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="nav-item"><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li class="nav-item"><a href="#">Atendimento ao Cliente</a></li>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+<div class="categoria">
+        <h2>COMPRE POR CATEGORIA</h2>
+        <div class="imgs_cat">
+            <div class="img_cat1">
+                    <a href="categoria_pessoal.html"><img src="imagens/categoria 1.png"></a>
+            </div>
+            <div class="img_cat2">      
+                    <a href="categoria_casa.html"><img src="imagens/categoria 3.png"></a>
+            </div>  
+            <div class="img_cat3">
+                    <a href="categoria_especial.html"><img src="imagens/categoria 2.png" width="148" height="146"></a>
+            </div>
+            <div class="img_cat4">
+                <a href="categoria_vestuario.html"><img src="imagens/categoria 4.png"></a>
+            </div> 
+        </div>
+ </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <h1 class="h1_1">OFERTAS DO DIA</h1>
+  <div class="produtos">
+    <div class="produto">
+        <img src="imagens/cosplay.png">
+        <div style="color: black;">
+        <h3>Kit Cosplay Manoel Gomes</h3>
+        <p class="preco"><br>R$590,00 <font class="subpreco"> R$600,00</font></p>    
+        </div>
+        <div class="botoes">
+        <button class="botaoc"><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></button>
+        <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+        </div>
+    </div>
+    <div class="produto">
+          <img src="imagens/camisa8.png">
+          <div style="color: black;">
+          <h3>Camisa Manoel Gomes violão</h3>
+          <p class="preco"><br>R$90,00 <font class="subpreco"> R$120,00</font></p>    
+          </div>
+          <div class="botoes">
+          <button class="botaoc"><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></button>
+          <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+          </div>
+      </div> 
+    <div class="produto">
+            <img src="imagens/camisa6.png">
+            <div style="color: black;">
+            <h3>Camisa Manoel Gomes violão</h3>
+            <p class="preco"><br>R$90,00 <font class="subpreco"> R$120,00</font></p>    
+            </div>
+            <div class="botoes">
+            <button class="botaoc"><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></button>
+            <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+            </div>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
