@@ -186,15 +186,19 @@ body{
         .botao {
           display: block;
           background-color: #1100ff;
-          color: #fff;
-          text-decoration: none;
           text-align: center;
           padding: 8px;
-          width: 76%;
+          width: 210%;
           border-radius: 5px;
           transition: background-color 0.2s ease;
+          border: none;
         }
 
+        .botao a{
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem;
+        }
         
         .botaoc {
           background-color: #1100ff;
@@ -292,11 +296,11 @@ body{
         <img src="imagens/cad_qui.png">
         <div style="color: black;">
         <h3>Kit Cosplay Manoel Gomes</h3>
-        <p class="preco"><br>De R$590,00 <font class="subpreco"> R$600,00</font></p>    
+        <p class="preco"><br>R$590,00 <font class="subpreco"> R$600,00</font></p>    
         </div>
         <div class="botoes">
-        <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
-        <a href="#" class="botao">Comprar</a>
+        <button class="botaoc"><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></button>
+        <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
         </div>
       </div>
 

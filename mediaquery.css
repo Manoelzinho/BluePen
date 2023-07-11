@@ -13,4 +13,22 @@
     .categoria{
         display: none;
     }
+    .produto h3{
+        font-size: 0.8rem;
+    }
+    .produto .preco{
+        font-size: 0.8rem;
+    }
+    .produto .subpreco{
+        font-size: 0.5rem;
+    }
+    .produto .botoes{
+        height: 25px;
+    }
+    .botao .botao_text{
+        font-size: 0.9rem;
+        top:-5px;
+        position: relative;
+    }
+
 }
