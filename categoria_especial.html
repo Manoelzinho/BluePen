@@ -13,120 +13,127 @@
   <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
   <!-- ............................. -->
   <title>Blue Pen</title>
-</head>
-<style>
+  <style>
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu&display=swap');
 *{
-    font-family: 'Bebas Neue', sans-serif;
-    font-family: 'Hind Madurai', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Carme', sans-serif;
+    text-decoration: none;
 }
 
-
-header{
-    background-color:rgb(51, 51, 189);
+:root{
+    --blue:#3333bd;
+    --white:#fff;
+    --dark: #0f0f0f;
+    --wblue: #7287f3;
+    --dblue: #27279b;
+    
 }
 
-i#burguer{
-    background-color: rgb(53, 53, 175);
-    display: block;
-    text-align: center;
-    padding: 10px;
+body{
+    color:var(--dark);
+    background-color: var(--white);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.2rem 0.6rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+}
+
+.navigation .logo{
+    color: var(--blue);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    list-style: none;
+}
+
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.navigation ul li a:hover{
+    color: var(--dblue);
+}
+
+.navigation i{
     cursor: pointer;
-}
-i#burguer:hover{
-    background-color: rgb(14, 14, 55);
+    font-size: 1.3rem;
 }
 
-nav{
+.menu{
+    cursor: pointer;
     display: none;
-    
-}
-nav > ul {
-    list-style-type: none;
-    
 }
 
-nav > ul > li > a{
-    font-size: 110%;
+.menu .bar{
     display: block;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    border-top: 2px solid rgb(71, 71, 210);;
-}
-nav > ul > li > a:hover{
-    background-color: rgb(42, 42, 117);
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
 }
 
-a:link, a:visited,  a:hover, a:active{
-    color: aliceblue;
-    text-decoration: none;
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--blue);
 }
 
-#botao{
-  border: none;
-  background-color: rgb(51, 51, 189);
-  cursor: pointer;
-  font-size: 20px;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-top: 10px;
-}
+@media(max-width:785px){
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height:100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: all 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+    }
   }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover #botao {
-    background-color:rgb(42, 42, 117);
-  }
-
- #botão{
-    position: absolute;
-    top : 0%;
-    right: 3%;
-   }
-
-
         .produtos {
-          padding-left: 20px;
-          padding-right: 20px;
-          padding-top: 20px;
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          color:black;
-        }
-        
-        .produtos1 {
           padding-left: 20px;
           padding-right: 20px;
           padding-top: 20px;
@@ -153,17 +160,15 @@ a:link, a:visited,  a:hover, a:active{
         }
         
         .preco {
-          font-size: 1.5em;
+          font-size: 1.2em;
           margin-bottom: 10px;
-          color: rgb(0, 0, 0);
+        }
+        .subpreco{
+            color: rgb(191, 191, 191);
+            font-size: 1rem;
+            text-decoration: line-through;
         }
 
-        .subpreco{
-          color: rgb(176, 176, 176);
-          font-size: 0.8em;
-          margin-bottom: 10px;
-        }
-        
         .botoes{
           display: flex;
         }
@@ -171,15 +176,20 @@ a:link, a:visited,  a:hover, a:active{
         .botao {
           display: block;
           background-color: #1100ff;
-          color: #fff;
-          text-decoration: none;
           text-align: center;
           padding: 8px;
-          width: 76%;
+          width: 80%;
           border-radius: 5px;
           transition: background-color 0.2s ease;
+          border: none;
+          margin-left: 2%;
         }
 
+        .botao a{
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem;
+        }
         
         .botaoc {
           background-color: #1100ff;
@@ -188,7 +198,6 @@ a:link, a:visited,  a:hover, a:active{
           border-radius: 7px;
           border: none;
           transition: background-color 0.2s ease;
-          position: relative;
           left: -2%;
         }
         
@@ -200,116 +209,113 @@ a:link, a:visited,  a:hover, a:active{
         .botaoc:hover {
           background-color:rgb(42, 42, 117);
         }
-        
-        #destaques {
-          background-color: #fff;
-          padding-left: 20px;
-          padding-right: 20px;
-          color:black;
+        .h1_1{
+          margin-left: 20px;
         }
-        
-.hr1{
-  position: relative;
-  margin-left: 20%;
-  margin-top: -2%;
-  height: 2px;
-}
-.hr2{
-  position: relative;
-  margin-left: 30%;
-  margin-top: -3%;
-  height: 2px;
-}
-
-footer {
-  position: absolute;
-  bottom: -400px;
-  left:0;
-    background-color: hsl(0, 3%, 18%);
-    color: white;
-    width: 100%;
-    height: 140px;    
-    text-align: center;
-    margin: 0%; 
-  }
-  
-  .Footer ul li {
-    display: flex;
-    margin-top: 7px;
-    padding-bottom: 3px;
-    margin-right: 100px;
-  }
-  
-  li:link, li:visited,  li:hover, li:active{
-    color: aliceblue;
-    text-decoration: none;
-  }
-  
+  .img1_h{
+    overflow: hidden;
+ }
+ 
+ .img1_h img{
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+ }
+ 
+ .img1_h:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+ }
 
 </style>
-<body onresize="mudouTamanho()">
+</head>
+<body>
   <header>
-        <!-- MENU HTMl -->
-
-        <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()" style="color: #ffffff;"></i>
-
-    <nav id="itens"> 
-        <div style="text-align: center;"></div> 
-            <ul>      
-           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-                <li><a href="entrar.html"> Entrar</a></li>
-                <li><a href="index.html"> Home</a></li>
-                <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
-                <li><a href="favoritos.html"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></li>
-                <li><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></a></li>
-                <li><a href="ofertasdia.html">Ofertas do dia</a></li>
-                <img id="botão" src="imagens/BLUE_PEN-removebg-preview.png" height="40" width="100">
-            </ul>
- </nav>
- </header>
-    <div style="color: black; padding-left: 20px; padding-top: 20px; text-decoration:none;">
-      <h2>PRODUTOS</h2>
-      <hr width="80%" color="black" class="hr1">
-    </div>
-
-    <div class="produtos">
-      <div class="produto">
-        <img src="imagens/cad_ing.png">
+      <nav class="navigation">
+          <a href="#" class="logo"><b>BLUE PEN</b></a>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></li>
+              <li class="nav-item"><a href="#">Entrar</a></li>
+              <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
+              <li class="nav-item"><a href="favoritos.html"><i class="fa-solid fa-heart"></i></a></li>
+              <li class="nav-item"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+              <li class="nav-item"><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+              <li class="nav-item"><a href="#">Atendimento ao Cliente</a></li>
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </ul>
+          <div class="menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+      </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <h1 class="h1_1">OFERTAS DA SEMANA</h1>
+  <div class="produtos">
+    <div class="produto">
+      <div class="img1_h">
+        <img src="imagens/album.png">
+      </div>
         <div style="color: black;">
-        <h3>Biografia  Manoel Gomes</h3>
-        <p class="preco"><br>R$350,00 <font class="subpreco"><s>R$400,00</s></font></p>    
+        <h3>Album Caneta Azul</h3>
+        <p class="preco"><br>R$170,00 <font class="subpreco"> R$210,00</font></p>    
         </div>
         <div class="botoes">
-        <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
-        <a href="#" class="botao">Comprar</a>
+        <button class="botaoc"><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></button>
+        <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
         </div>
-      </div>
-
-      <div class="produto">
-        <img src="imagens/24 Sem Título_20230401174504.png">
-        <h3>Violão autografado </h3>
-        <p class="preco"><br>R$2500,00 <font class="subpreco"><s>R$6000,00</s></font></p>
-        <div class="botoes">
-          <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
-          <a href="#" class="botao">Comprar</a>
-          </div>
-      </div>
-
-      <div class="produto">
-        <img src="imagens/8 Sem Título_20230331102241.png">
-        <h3>Disco - Álbum</h3>
-        <p class="preco"><br>R$500,00 <font class="subpreco"><s>R$800,00</s></font></p>
-        <div class="botoes">
-          <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
-          <a href="#" class="botao">Comprar</a>
-          </div>
-      </div>
     </div>
-</main>
+    <div class="produto">
+      <div class="img1_h">
+          <img src="imagens/violao.png">
+      </div>
+          <div style="color: black;">
+          <h3>Violão autografado</h3>
+          <p class="preco"><br>R$3000,00 <font class="subpreco"> R$5000,00</font></p>    
+          </div>
+          <div class="botoes">
+          <button class="botaoc"><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></button>
+          <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+          </div>
+      </div> 
+    <div class="produto">
+      <div class="img1_h">
+            <img src="imagens/livro1.png">
+      </div>
+            <div style="color: black;">
+            <h3>Biografia Manoel</h3>
+            <p class="preco"><br>R$60,00 <font class="subpreco"> R$90,00</font></p>    
+            </div>
+            <div class="botoes">
+            <button class="botaoc"><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></button>
+            <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+            </div>
+      </div>
+  </div>
+
+
+      <h1 class="h1_1">DESTAQUES DA COLEÇÃO</h1>
+  <div class="produtos">
+    <div class="produto">
+      <div class="img1_h">
+        <img src="imagens/album_assinado.png">
+      </div>
+        <div style="color: black;">
+        <h3>Album Caneta Azul AUTOGRAFADO</h3>
+        <p class="preco"><br>R$500,00</p>     
+        </div>
+        <div class="botoes">
+        <button class="botaoc"><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></button>
+        <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+        </div>
+    </div>
+  </div>
+   
+   
 <script src="script.js"></script>
 </body>
 </html>
