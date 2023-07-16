@@ -260,3 +260,12 @@ body{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
  }
+
+ .categoria1 h2{
+    text-align: center;
+ }
+
+ .imgs_cat1{
+    margin-left: 33%;
+    
+}
