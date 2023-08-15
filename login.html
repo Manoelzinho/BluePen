@@ -13,13 +13,37 @@
     <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
     <!-- ............................. -->
     <title>Blue Pen</title>
+
+    <style>
+        
+
+        main.boxlogin{
+            margin: 0;
+            padding: 0;
+            font-family: 'Carme', sans-serif;
+            background-color: wheat ;
+            max-width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 350px;
+            min-height: 40vh;
+        }
+        
+        .input{
+            border-radius: 15px;
+            
+        }
+
+
+    </style>
 </head>
 <body>
     <header>
         <nav class="navigation">
             <a href="#" class="logo"><b>BLUE PEN</b></a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="login.html">Entrar</a></li>
                 <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
                 <li class="nav-item"><a href="favoritos.html"><i class="fa-solid fa-heart"></i></a></li>
                 <li class="nav-item"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -33,9 +57,27 @@
                 <span class="bar"></span>
             </div>
         </nav>
-    </header>
+    </header><br><br><br><br>
+    
 
-    <main>
+    
+    <main class="boxlogin"> 
+              
+            <form>
+                <h2>Login</h2><br><br>
+                
+                <div class="'input">
+                    <input type="text" placeholder="Senha">
+                </div><br>
+
+                <div class="input">
+                    <input type="text" placeholder="E-mail">
+                </div><br>
+
+                <div class="input">
+                    <input type="submit" value="Entrar">
+                </div>
+            </form>
         
     </main>
 
