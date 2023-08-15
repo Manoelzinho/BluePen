@@ -299,6 +299,19 @@ body{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
  }
+ .img1_h{
+    overflow: hidden;
+ }
+ 
+ .img1_h img{
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+ }
+ 
+ .img1_h:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+ }
 </style>
 </head>
 <body>
@@ -371,7 +384,9 @@ body{
     <h1 class="h1_1">OFERTAS DO DIA</h1>
   <div class="produtos">
     <div class="produto">
-        <img src="imagens/prato.png">
+        <div class="img1_h">
+            <img src="imagens/prato.png">
+        </div>
         <div style="color: black;">
         <h3>Prato Manoeol Gomes</h3>
         <p class="preco"><br>R$10,00 <font class="subpreco"> R$20,00</font></p>    
@@ -382,7 +397,9 @@ body{
         </div>
     </div>
     <div class="produto">
+        <div class="img1_h">
           <img src="imagens/camisa8.png">
+        </div>
           <div style="color: black;">
           <h3>Camisa Manoel Gomes violão</h3>
           <p class="preco"><br>R$40,00 <font class="subpreco"> R$90,00</font></p>    
@@ -393,7 +410,9 @@ body{
           </div>
       </div> 
     <div class="produto">
+        <div class="img1_h">
             <img src="imagens/livro1.png">
+        </div>
             <div style="color: black;">
             <h3>Biografia Manoel Gomes</h3>
             <p class="preco"><br>R$50,00 <font class="subpreco"> R$90,00</font></p>    
@@ -403,7 +422,7 @@ body{
             <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
             </div>
       </div>
-      <img src="imagens/propaganda3.png" style="margin-left:10%; width: 76%; height: 50%;">
+      <img src="imagens/propaganda3.png" style="margin-left:10%; width: 76%; height: 50%; cursor: pointer;">
     <script src="script.js"></script>
 </body>
 </html>

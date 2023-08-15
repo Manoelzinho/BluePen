@@ -277,15 +277,16 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0px 4%;
+    line-height: 2rem;
 }
 
 .text_prog{
-    max-width: 37rem;
+    max-width: 40rem;
 }
 
 .prog img{
     margin-bottom: -10rem;  
-    width:60%;
+    width:70%;
     height:70%;
 }
 
