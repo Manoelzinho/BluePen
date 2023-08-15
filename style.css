@@ -270,5 +270,26 @@ body{
     
 }
 
+<<<<<<< HEAD
 
 
+=======
+.marketing{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 4%;
+}
+
+.text_prog{
+    max-width: 37rem;
+}
+
+.prog img{
+    margin-bottom: -10rem;  
+    width:60%;
+    height:70%;
+}
+>>>>>>> da5b58291c9c1fe1e88a9c2b84173d73f7efc423
