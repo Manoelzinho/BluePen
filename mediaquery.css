@@ -30,6 +30,15 @@
     .categoria{
         display: none;
     }
+    .prog{
+        display: none;
+    }
+    .cards_prog{
+        margin-left: 10%;
+    }
+    .text_prog{
+        margin-bottom: 1rem;
+    }
 }
 
 @media screen and (min-width: 768px){
