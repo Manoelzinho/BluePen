@@ -15,25 +15,114 @@
     <title>Blue Pen</title>
 
     <style>
-        
-
-        main.boxlogin{
+        *{
             margin: 0;
             padding: 0;
+            border: 0;
+            box-sizing: border-box;
             font-family: 'Carme', sans-serif;
-            background-color: wheat ;
-            max-width: 350px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        
+        main.boxlogin{
+            background: rgb(236, 236, 236);
             max-width: 350px;
             min-height: 40vh;
+            padding: 2rem;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+
+           position: absolute;
+           top: 30%;
+           left: 40%;           
+        }
+
+        main h2{
+            margin-bottom: 2rem;
+        }
+
+
+
+        form .inputdata{
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+        .inputdata .underline::before{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: -5px;
+            left: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .inputdata .underline::after{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(to left, #3333bd, #7287f3);
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+            transform-origin: left;
+        }
+
+        .inputdata input:focus ~ .underline::after{
+            transform: scaleX(1);
+        }
+
+        .inputdata{
+            position: relative;
+        }
+
+        form .inputdata:first-child{
+            margin-bottom: 1.5rem;
         }
         
-        .input{
-            border-radius: 15px;
-            
+        .inputdata input{
+            outline: none;
+            font-size: 0.9rem;
+            color: rgba(0, 0, 0, 0.7);
+            background: rgb(236, 236, 236);
         }
+
+        form input[type="submit"]{
+            margin-top: 2rem;
+            padding: 0.3rem;
+            background: linear-gradient(to left, #3333bd, #7287f3);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 300;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+                  
+        }
+
+        form input[type="submit"]:hover{
+            letter-spacing: 0.5px;
+            background: linear-gradient(to right, #3333bd, #7287f3);   
+        }
+
+
+        .cadastro{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;         
+        }
+
+        .cadastro a{
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 0.8rem;
+            text-align: center;
+            text-decoration: underline; 
+        }
+
+
 
 
     </style>
@@ -48,7 +137,7 @@
                 <li class="nav-item"><a href="favoritos.html"><i class="fa-solid fa-heart"></i></a></li>
                 <li class="nav-item"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li class="nav-item"><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-                <li class="nav-item"><a href="manutencao.html">Atendimento ao Cliente</a></li>
+                <li class="nav-item"><a href="#">Atendimento ao Cliente</a></li>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </ul>
             <div class="menu">
@@ -57,28 +146,34 @@
                 <span class="bar"></span>
             </div>
         </nav>
-    </header><br><br><br><br>
-    
+    </header><br><br><br><br><br><br>
 
     
-    <main class="boxlogin"> 
-              
-            <form>
-                <h2>Login</h2><br><br>
-                
-                <div class="'input">
+    <main class="boxlogin">  
+        <h2>Login</h2>          
+            <form>              
+                <div class="inputdata">
                     <input type="text" placeholder="Senha">
-                </div><br>
+                    <div class="underline"></div>
+                </div>
+ 
 
-                <div class="input">
+                <div class="inputdata">
                     <input type="text" placeholder="E-mail">
-                </div><br>
+                    <div class="underline"></div>
+                </div>
 
-                <div class="input">
+
+                <div class="inputdata">
                     <input type="submit" value="Entrar">
                 </div>
             </form>
+
         
+            <div class="cadastro">
+                <a href="#"><span>Ou faça cadastro</span></a>
+            </div>
+
     </main>
 
     <script src="script.js"></script>
