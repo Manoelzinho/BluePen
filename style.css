@@ -282,7 +282,7 @@ body{
 
 .text_prog{
     max-width: 40rem;
-    margin-bottom: 10rem; 
+    margin-bottom: -13rem; 
 }
 
 .prog img{
@@ -309,4 +309,13 @@ body{
     justify-content: space-between;
     margin-left: -6%;
     margin-right: 20%;
+}
+footer{
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: -13rem;
+    background-color: rgb(87, 91, 104);
+    color: #ffffff;
+    padding: 13px;
 }
