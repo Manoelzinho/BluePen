@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 *{
     margin: 0;
     padding: 0;
@@ -311,11 +311,11 @@ body{
     margin-right: 20%;
 }
 footer{
-    max-width: 100%;
     text-align: center;
-    position: relative;
-    bottom: -13rem;
     background-color: rgb(87, 91, 104);
     color: #ffffff;
-    padding: 13px;
+    position: absolute;
+    margin-bottom: 0;
+    width: 100%;   
+    line-height: 25px;
 }
