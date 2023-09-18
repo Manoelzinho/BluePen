@@ -319,3 +319,97 @@ footer{
     width: 100%;   
     line-height: 25px;
 }
+
+
+.produtos {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color:black;
+  }
+  
+  .produto {
+    width: 30%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  .produto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .preco {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .subpreco{
+      color: rgb(191, 191, 191);
+      font-size: 1rem;
+      text-decoration: line-through;
+  }
+
+  .botoes{
+    display: flex;
+  }
+
+  .botao {
+    display: block;
+    background-color: #1100ff;
+    text-align: center;
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    border: none;
+    margin-left: 2%;
+  }
+
+  .botao a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .botaoc {
+    background-color: #1100ff;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.2s ease;
+    left: -2%;
+  }
+  
+  .botao:hover {
+    background-color:rgb(42, 42, 117);
+    color: white;
+  }
+  
+  .botaoc:hover {
+    background-color:rgb(42, 42, 117);
+  }
+  .h1_1{
+    margin-left: 20px;
+  }
+.img1_h{
+overflow: hidden;
+}
+
+.img1_h img{
+-webkit-transition: -webkit-transform .5s ease;
+transition: transform .5s ease;
+}
+
+.img1_h:hover img{
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+}
